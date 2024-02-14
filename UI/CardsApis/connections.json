@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "Database": "Server=.\\SQLEXPRESS2014;Database=db_card;User Id=sa;Password=Qwerty123!;Persist Security Info=false"
+  }
+}

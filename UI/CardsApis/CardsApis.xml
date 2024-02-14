@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CardsApis</name>
+    </assembly>
+    <members>
+        <member name="M:CardsApis.Controllers.AuthorizationController.Authenticate(Contracts.ReqModels.AuthLoginReq,System.Threading.CancellationToken)">
+            <summary>
+            Post request to authenticate user and get a time bound token for API authentication.
+            </summary>
+            <param name="req"></param>
+            <param name="cancellationtoken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardsApis.Controllers.AuthorizationController.RefreshToken(Contracts.ResModels.ApiTokenReq)">
+            <summary>
+            Post request to refresh a time bound access token for Api authentication
+            with an active refresh token and the expired access token.
+            </summary>
+            <param name="req">object with an active refresh token and the expired access token. </param>
+            <returns></returns>
+        </member>
+        <member name="M:CardsApis.Controllers.AuthorizationController.RevokeToken(System.String)">
+            <summary>
+            Post request to revoke a time bound refresh token.
+            Once revoked, the refresh token can no longer be used to refresh an access token.
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardsApis.Controllers.CardsController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{Domain.Enums.CardStatusTypes},System.String)">
+            <summary>
+            Get request to query for range of cards.
+            </summary>
+            <param name="page">pagination page requested.</param>
+            <param name="size">pagination page size requested.</param>
+            <param name="searchTerm">string with values to filter from name, description and color.</param>
+            <param name="dateCreated">date for the requested data. Format should be yyyyMMdd.</param>
+            <param name="cardStatus">filter data by status.</param>
+            <param name="orderBy">valid values include name, color, status, datecreated, or all.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CardsApis.Controllers.CardsController.Get(System.Int64)">
+            <summary>
+            Get request to query for a card by id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardsApis.Controllers.CardsController.Post(Contracts.ReqModels.AddCardReq)">
+            <summary>
+            Post request to create card.
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardsApis.Controllers.CardsController.Put(System.Int64,Contracts.ReqModels.UpdateCardReq)">
+            <summary>
+            Put request to update a card identified by its id.
+            </summary>
+            <param name="id">card id to update.</param>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardsApis.Controllers.CardsController.Delete(System.Int64)">
+            <summary>
+            Delete request to remove a card, identified by its id.
+            </summary>
+            <param name="id">Card unique id to delete.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
