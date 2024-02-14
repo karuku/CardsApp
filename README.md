@@ -1,5 +1,8 @@
 Cards RESTful web service (C#/.NET, Sr)
 
+This is a web api project built with Visual Studio 2019.
+TargetFramework is net5.0.
+
 Configurations:
 1. To configure JWT(JSON Web Token) configuration settings, open the appsettings.json and find the section named "JWT" where you can change the values according to your requirements.
 2. In the same file, the section "AppSettings" contains the serverType(SqlServer=1,PostGres=2, etc). NB: Kindly note that only SqlServer is supported
